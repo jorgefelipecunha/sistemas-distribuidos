@@ -59,12 +59,12 @@ export function TaskList() {
   return (
     <section className="task-list container">
       <header>
-        <h2>Minhas tasks</h2>
+        <h2>Listas de produtos</h2>
 
         <div className="input-group">
           <input
             type="text"
-            placeholder="Adicionar novo todo"
+            placeholder="Nome do produto"
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
             onKeyDown={handleKeyDown}
@@ -81,21 +81,13 @@ export function TaskList() {
 
       <main>
         <ul>
-          {tasks.map((task) => (
+          {tasks.map((task, index) => (
             <li key={task.id}>
               <div
                 className={task.isComplete ? "completed" : ""}
                 data-testid="task"
               >
-                <label className="checkbox-container">
-                  <input
-                    type="checkbox"
-                    readOnly
-                    checked={task.isComplete}
-                    onClick={() => handleToggleTaskCompletion(task.id)}
-                  />
-                  <span className="checkmark"></span>
-                </label>
+                <label className="checkbox-container">{index}</label>
                 <p>{task.title}</p>
               </div>
 

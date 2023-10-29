@@ -6,10 +6,14 @@ header.header {
     max-width: 1120px;
     margin: 0 auto;
 
-    padding: 2rem 1rem 12rem;
-
+    // padding: 2rem 1rem 12rem;
+    border:1px soli red;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  > img{
+    width: 100px;
+    height: 150px;
   }
 }
